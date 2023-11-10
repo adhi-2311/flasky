@@ -210,7 +210,7 @@ class UserModelTestCase(unittest.TestCase):
         self.assertTrue(Follow.query.count() == 1)
 
     def test_to_json(self):
-        u = User(email='john@example.com', password='catty')
+        u = User(email='john@example.com', password='cat')
         db.session.add(u)
         db.session.commit()
         with self.app.test_request_context('/'):
